@@ -371,13 +371,12 @@
             }
         });
 
-        // FUNGSI ROUTING: Direct to Checkout Kasir Pusat
+        // FUNGSI ROUTING: Direct to Checkout MitraResto
         function checkoutLangsung() {
-            // Asumsi PRD-06 adalah ID untuk klikResto di Database Pusat
-            let productId = 'PRD-06'; 
-
             const refParam = currentRef ? `&ref=${currentRef}` : '';
-            const checkoutUrl = `https://kliksistem.vercel.app/?buy=${productId}${refParam}`;
+            
+            // MENGUBAH ARAH DARI KLIK SISTEM KE MITRARESTO
+            const checkoutUrl = `https://mitraresto.kliksistem.com/?buy=setup${refParam}`;
             
             window.location.href = checkoutUrl;
         }
